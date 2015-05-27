@@ -1535,53 +1535,6 @@
         ]
     },
     {
-        "name": "sensiolabs/security-checker",
-        "version": "v2.0.3",
-        "version_normalized": "2.0.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sensiolabs/security-checker.git",
-            "reference": "cde03c48d490d805ef1349e5108f8b3085981ead"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/cde03c48d490d805ef1349e5108f8b3085981ead",
-            "reference": "cde03c48d490d805ef1349e5108f8b3085981ead",
-            "shasum": ""
-        },
-        "require": {
-            "ext-curl": "*",
-            "symfony/console": "~2.0"
-        },
-        "time": "2015-05-22 14:21:04",
-        "bin": [
-            "security-checker"
-        ],
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "SensioLabs\\Security": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien.potencier@gmail.com"
-            }
-        ],
-        "description": "A security checker for your composer.lock"
-    },
-    {
         "name": "sensio/distribution-bundle",
         "version": "v3.0.24",
         "version_normalized": "3.0.24.0",
@@ -1698,6 +1651,176 @@
         "keywords": [
             "annotations",
             "controllers"
+        ]
+    },
+    {
+        "name": "sensiolabs/security-checker",
+        "version": "v2.0.4",
+        "version_normalized": "2.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sensiolabs/security-checker.git",
+            "reference": "b901b30ffcabc4e941b2b26edd8e77de03f09d49"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/b901b30ffcabc4e941b2b26edd8e77de03f09d49",
+            "reference": "b901b30ffcabc4e941b2b26edd8e77de03f09d49",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "symfony/console": "~2.0"
+        },
+        "time": "2015-05-27 14:05:32",
+        "bin": [
+            "security-checker"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "SensioLabs\\Security": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien.potencier@gmail.com"
+            }
+        ],
+        "description": "A security checker for your composer.lock"
+    },
+    {
+        "name": "behat/transliterator",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Behat/Transliterator.git",
+            "reference": "c93521d3462a554332d1ef5bb0e9b5b8ca4106c4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Behat/Transliterator/zipball/c93521d3462a554332d1ef5bb0e9b5b8ca4106c4",
+            "reference": "c93521d3462a554332d1ef5bb0e9b5b8ca4106c4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2014-05-15 22:08:22",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Behat\\Transliterator": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Artistic-1.0"
+        ],
+        "description": "String transliterator",
+        "keywords": [
+            "i18n",
+            "slug",
+            "transliterator"
+        ]
+    },
+    {
+        "name": "gedmo/doctrine-extensions",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
+            "reference": "3940af1099c47dd4bea036616730e8760a3fdba1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/3940af1099c47dd4bea036616730e8760a3fdba1",
+            "reference": "3940af1099c47dd4bea036616730e8760a3fdba1",
+            "shasum": ""
+        },
+        "require": {
+            "behat/transliterator": "~1.0",
+            "doctrine/common": "~2.4",
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "doctrine/common": ">=2.5.0-BETA1",
+            "doctrine/mongodb-odm": ">=1.0.0-BETA12",
+            "doctrine/orm": ">=2.5.0-RC1",
+            "phpunit/phpunit": "~4.4",
+            "phpunit/phpunit-mock-objects": "~2.3",
+            "symfony/yaml": "~2.6"
+        },
+        "suggest": {
+            "doctrine/mongodb-odm": "to use the extensions with the MongoDB ODM",
+            "doctrine/orm": "to use the extensions with the ORM"
+        },
+        "time": "2015-05-01 08:39:37",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Gedmo\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Buchmann",
+                "email": "david@liip.ch"
+            },
+            {
+                "name": "Gediminas Morkevicius",
+                "email": "gediminas.morkevicius@gmail.com"
+            },
+            {
+                "name": "Gustavo Falco",
+                "email": "comfortablynumb84@gmail.com"
+            }
+        ],
+        "description": "Doctrine2 behavioral extensions",
+        "homepage": "http://gediminasm.org/",
+        "keywords": [
+            "Blameable",
+            "behaviors",
+            "doctrine2",
+            "extensions",
+            "gedmo",
+            "loggable",
+            "nestedset",
+            "sluggable",
+            "sortable",
+            "timestampable",
+            "translatable",
+            "tree",
+            "uploadable"
         ]
     }
 ]

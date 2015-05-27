@@ -1,0 +1,1 @@
+<?php return unserialize('a:3:{i:0;O:37:"Doctrine\\ORM\\Mapping\\MappedSuperclass":1:{s:15:"repositoryClass";N;}i:1;O:42:"Doctrine\\ORM\\Mapping\\HasLifecycleCallbacks":0:{}i:2;O:39:"Gedmo\\Mapping\\Annotation\\SoftDeleteable":3:{s:9:"fieldName";s:9:"deletedAt";s:9:"timeAware";b:0;s:5:"value";N;}}');
