@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Profiler/toolbar_js.html.twig */
+/* WebProfilerBundle:Profiler:toolbar_js.html.twig */
 class __TwigTemplate_f7468f000c1912d747d226ff01b69fec380cd3283ecb381dce5d0fd210d46241 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -21,7 +21,7 @@ class __TwigTemplate_f7468f000c1912d747d226ff01b69fec380cd3283ecb381dce5d0fd210d
         echo "\" class=\"sf-toolbar\" style=\"display: none\"></div>
 ";
         // line 2
-        $this->loadTemplate("@WebProfiler/Profiler/base_js.html.twig", "@WebProfiler/Profiler/toolbar_js.html.twig", 2)->display($context);
+        $this->loadTemplate("@WebProfiler/Profiler/base_js.html.twig", "WebProfilerBundle:Profiler:toolbar_js.html.twig", 2)->display($context);
         // line 3
         echo "<script>/*<![CDATA[*/
     (function () {
@@ -127,7 +127,7 @@ class __TwigTemplate_f7468f000c1912d747d226ff01b69fec380cd3283ecb381dce5d0fd210d
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Profiler/toolbar_js.html.twig";
+        return "WebProfilerBundle:Profiler:toolbar_js.html.twig";
     }
 
     public function isTraitable()
