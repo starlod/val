@@ -1,0 +1,58 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {# 共通のCSSを定義 #}
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/css/common.css') }}" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/cepertino/jquery-ui.css" rel="stylesheet" />
+    {% block stylesheet %}{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {# 共通のJavascriptを定義 #}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
+    {% block javascript %}{% endblock %}
+{% endblock %}
+
+{% block body %}
+    {% block header %}
+    <div id="header">
+        {# ヘッダー部 サイトロゴ、サイトタイトル、トップメニュー、ログアウトなど #}
+    </div><!-- / #header -->
+    {% endblock %}
+
+    {% block main_contents %}
+    <div id="main_contents">
+        {% block flash_message %}
+            {# フラッシュメッセージを表示する(別テンプレートからインクルード) #}
+            {% include "AppDefaultBundle::_message.html.twig" %}
+        {% endblock %}
+        {% block left_content %}
+        <div id="left_contents">
+            {# 左側コンテンツを書きます。 #}
+            {% block left_content_01 %}{% endblock %}
+            {% block left_content_02 %}{% endblock %}
+            {% block left_content_03 %}{% endblock %}
+        </div><!-- / #left_contents -->
+        {% endblock %}
+        {% block right_content %}
+        <div id="right_contents">
+            {# 右側コンテンツを書きます。 #}
+            {% block right_content_01 %}{% endblock %}
+            {% block right_content_02 %}{% endblock %}
+            {% block right_content_03 %}{% endblock %}
+        </div><!-- / #right_contents -->
+        {% endblock %}
+    </div><!-- / #main_contents -->
+    {% endblock %}
+
+    {% block footer %}
+        <div id="footer">
+            <div class="footer_navi">
+                <p id="copyright">Copyright &copy; 2015 www.starlod.net All Rights Reserved.</p>
+            </div>
+        </div><!-- / #footer -->
+    {% endblock %}
+{% endblock %}
