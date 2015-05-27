@@ -1,0 +1,9 @@
+php app/console generate:bundle --namespace=ValBundle --format=yml
+
+php app/console doctrine:mapping:import ValBundle annotation
+
+php app/console doctrine:generate:entities ValBundle --no-backup
+
+php app/console doctrine:generate:entities ValBundle/Entity/Register --no-backup
+
+php app/console doctrine:generate:crud --entity=ValBundle:Register --with-write
