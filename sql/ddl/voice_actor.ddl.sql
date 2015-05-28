@@ -1,15 +1,16 @@
+DROP DATABASE IF EXISTS voice_actor CASCADE;
 -- drop database voice_actor;
--- create database voice_actor character set utf8;
--- drop user va_user@localhost;
--- grant all privileges on voice_actor.* to va_user@localhost identified by 'EbecaW1h';
--- CREATE TABLE option (
---     id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
---     option_name varchar(64) NOT NULL DEFAULT '',
---     option_value longtext NOT NULL,
---     autoload varchar(20) NOT NULL DEFAULT 'yes',
---     PRIMARY KEY (option_id),
---     UNIQUE KEY option_name (option_name)
--- ) ENGINE=MyISAM AUTO_INCREMENT=101;
+create database voice_actor character set utf8;
+drop user va_user@localhost;
+grant all privileges on voice_actor.* to va_user@localhost identified by 'EbecaW1h';
+CREATE TABLE option (
+    id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+    option_name varchar(64) NOT NULL DEFAULT '',
+    option_value longtext NOT NULL,
+    autoload varchar(20) NOT NULL DEFAULT 'yes',
+    PRIMARY KEY (option_id),
+    UNIQUE KEY option_name (option_name)
+) ENGINE=MyISAM AUTO_INCREMENT=101;
 
 DROP TABLE IF EXISTS register CASCADE;
 CREATE TABLE register (
