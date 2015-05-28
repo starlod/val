@@ -23,14 +23,15 @@
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="database_driver">pdo_mysql</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
-    <parameter key="database_name">voice_actor</parameter>
-    <parameter key="database_user">va_user</parameter>
+    <parameter key="database_name">val</parameter>
+    <parameter key="database_user">val_user</parameter>
     <parameter key="database_password">EbecaW1h</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
@@ -2446,8 +2447,8 @@
         <argument key="driver">pdo_mysql</argument>
         <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
-        <argument key="dbname">voice_actor</argument>
-        <argument key="user">va_user</argument>
+        <argument key="dbname">val</argument>
+        <argument key="user">val_user</argument>
         <argument key="password">EbecaW1h</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>

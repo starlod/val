@@ -43,12 +43,27 @@ class Register extends AppEntity
      */
     private $siteUrl = '';
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="feed_url", type="string", length=255, nullable=true)
+     */
+    private $feedUrl = '';
+
     /**
      * @var string
      *
      * @ORM\Column(name="twitter", type="string", length=255, nullable=true)
      */
     private $twitter = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ameba", type="string", length=255, nullable=true)
+     */
+    private $ameba = '';
 
     /**
      * @var string
@@ -301,5 +316,51 @@ class Register extends AppEntity
     public function getRemarks()
     {
         return $this->remarks;
+    }
+
+    /**
+     * Set feedUrl
+     *
+     * @param string $feedUrl
+     * @return Register
+     */
+    public function setFeedUrl($feedUrl)
+    {
+        $this->feedUrl = $feedUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get feedUrl
+     *
+     * @return string
+     */
+    public function getFeedUrl()
+    {
+        return $this->feedUrl;
+    }
+
+    /**
+     * Set ameba
+     *
+     * @param string $ameba
+     * @return Register
+     */
+    public function setAmeba($ameba)
+    {
+        $this->ameba = $ameba;
+
+        return $this;
+    }
+
+    /**
+     * Get ameba
+     *
+     * @return string
+     */
+    public function getAmeba()
+    {
+        return $this->ameba;
     }
 }

@@ -1,9 +1,20 @@
+# バンドル生成
 php app/console generate:bundle --namespace=ValBundle --format=yml
 
+# エンティティ生成
 php app/console doctrine:mapping:import ValBundle annotation
 
+# ゲッターセッター生成
 php app/console doctrine:generate:entities ValBundle --no-backup
 
+# ゲッターセッター生成
 php app/console doctrine:generate:entities ValBundle/Entity/Register --no-backup
 
+# CRUD生成
 php app/console doctrine:generate:crud --entity=ValBundle:Register --with-write
+
+# テーブル更新
+php app/console doctrine:schema:update --force
+
+# データ投入
+php app/console doctrine:fixtures:load
