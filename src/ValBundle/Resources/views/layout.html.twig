@@ -16,8 +16,13 @@
 {% endblock %}
 
 {% block body %}
+    <header>
     {% block header %}
+    {% endblock %}
+    </header>
+
     <nav class="navbar navbar-default">
+    {% block nav %}
         <div class="container-fluid">
             <div class="nav-header">
                 <a class="navbar-brand" href="#">Boostrap</a>
@@ -29,34 +34,35 @@
               <li><a href="#">Piyo</a></li>
             </ul>
         </div>
-    </nav>
     {% endblock %}
+    </nav>
 
-    {% block main_contents %}
-    <div id="main_contents">
+    <article>
+    {% block contents %}
+    <div id="contents">
         {% block flash_message %}
             {# フラッシュメッセージを表示する(別テンプレートからインクルード) #}
             {% include "AppDefaultBundle::_message.html.twig" %}
         {% endblock %}
-        {% block left_content %}
-        <div id="left_contents">
-            {# 左側コンテンツを書きます。 #}
-            {% block left_content_01 %}{% endblock %}
-            {% block left_content_02 %}{% endblock %}
-            {% block left_content_03 %}{% endblock %}
-        </div><!-- / #left_contents -->
-        {% endblock %}
-        {% block right_content %}
-        <div id="right_contents">
-            {# 右側コンテンツを書きます。 #}
-            {% block right_content_01 %}{% endblock %}
-            {% block right_content_02 %}{% endblock %}
-            {% block right_content_03 %}{% endblock %}
-        </div><!-- / #right_contents -->
-        {% endblock %}
-    </div><!-- / #main_contents -->
-    {% endblock %}
 
+        <section>
+        <div id="content">
+            <h1 id="content_header">{% block content_header %}{% endblock %}</h1>
+            <div id="content_body">
+                {% block content_body %}
+                {% endblock %}
+            </div>
+        </div>
+        </section>
+
+        <div id="sidebar">
+            {% block widget_01 %}{% endblock %}
+            {% block widget_02 %}{% endblock %}
+            {% block widget_03 %}{% endblock %}
+        </div>
+    </article>
+
+    <footer>
     {% block footer %}
         <div id="footer">
             <div class="footer_navi">
@@ -64,4 +70,5 @@
             </div>
         </div><!-- / #footer -->
     {% endblock %}
+    </footer>
 {% endblock %}

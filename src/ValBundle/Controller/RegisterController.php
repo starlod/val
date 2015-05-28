@@ -3,6 +3,7 @@
 namespace ValBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -28,6 +29,10 @@ class RegisterController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
+
+$t = $this->get('translator')->trans('hoge');
+echo $t;
+die;
 
         $entities = $em->getRepository('ValBundle:Register')->findAll();
 

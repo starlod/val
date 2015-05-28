@@ -5,8 +5,11 @@ imports:
 
 framework:
     #esi:             ~
-#    translator:      { fallbacks: ["%locale%"] }
-    translator:      { fallbacks: "jp" }
+    translator:      { fallbacks: ["%locale%"] }
+    # translator:
+    #     enabled:    true
+    #     fallback:   jp
+    #     logging:    true
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
