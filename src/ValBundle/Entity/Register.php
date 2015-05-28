@@ -3,6 +3,7 @@
 namespace ValBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ValBundle\Entity\AppEntity;
 
 /**
  * Register
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="register")
  * @ORM\Entity
  */
-class Register
+class Register extends AppEntity
 {
     /**
      * @var integer

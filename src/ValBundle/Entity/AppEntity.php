@@ -29,13 +29,13 @@ abstract class AppEntity
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=true)
      */
-     protected $createdAt = '0000-00-00 00:00:00';
+     protected $createdAt;
      /**
      * @var datetime
      *
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
-     protected $updatedAt = '0000-00-00 00:00:00';
+     protected $updatedAt;
     /**
      * @var dateTime
      *

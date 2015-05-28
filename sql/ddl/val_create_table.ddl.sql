@@ -29,8 +29,8 @@ CREATE TABLE register (
     remarks longtext DEFAULT '',
     created_by bigint(20) DEFAULT 0,
     updated_by bigint(20) DEFAULT 0,
-    created_at datetime DEFAULT '0000-00-00 00:00:00',
-    updated_at datetime DEFAULT '0000-00-00 00:00:00',
+    created_at datetime,
+    updated_at datetime,
     deleted_at datetime,
     primary key(id)
 );
