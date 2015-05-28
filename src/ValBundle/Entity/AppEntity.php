@@ -17,31 +17,34 @@ abstract class AppEntity
      *
      * @ORM\Column(name="created_by", type="integer", nullable=true)
      */
-    protected $createdBy = null;
+    protected $createdBy = 0;
     /**
      * @var integer
      *
      * @ORM\Column(name="updated_by", type="integer", nullable=true)
      */
-    protected $updatedBy = null;
+    protected $updatedBy = 0;
     /**
      * @var datetime
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=true)
      */
-     protected $createdAt = null;
+     protected $createdAt = '0000-00-00 00:00:00';
      /**
      * @var datetime
      *
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
-     protected $updatedAt = null;
+     protected $updatedAt = '0000-00-00 00:00:00';
     /**
      * @var dateTime
      *
      * @ORM\Column(name="deleted_at", type="datetime", nullable=true)
      */
     protected $deletedAt = null;
+
+
+
     /**
      * Set createdBy
      *
