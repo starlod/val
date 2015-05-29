@@ -1,16 +1,13 @@
-{% extends '::base.html.twig' %}
+{% extends 'ValBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>Register edit</h1>
+{% block title %}{{ 'register.edit.title'|trans }}{% endblock %}
 
+{% block content_body %}
+<div class="container">
     {{ form(edit_form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('register') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+</div>
+<div class="container">
+<a href="{{ path('register') }}" class="btn btn-default">{{ 'btn_com.index'|trans }}}</a>
+{{ form(delete_form) }}
+</div>
 {% endblock %}

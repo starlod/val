@@ -1,9 +1,10 @@
-{% extends '::base.html.twig' %}
+{% extends 'ValBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>Register</h1>
+{% block title %}{{ 'register.show.title'|trans }}{% endblock %}
 
-    <table class="record_properties">
+{% block content_body %}
+<div class="container">
+    <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -67,18 +68,11 @@
             </tr>
         </tbody>
     </table>
+</div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('register') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('register_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+<div class="container">
+<a href="{{ path('register') }}" class="btn btn-default">{{ 'btn_com.index'|trans }}</a>
+<a href="{{ path('register_edit', { 'id': entity.id }) }}" class="btn btn-default">{{ 'btn_com.edit'|trans }}</a>
+{{ form(delete_form) }}
+</div>
 {% endblock %}

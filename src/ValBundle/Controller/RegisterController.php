@@ -30,9 +30,9 @@ class RegisterController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-$t = $this->get('translator')->trans('hoge');
-echo $t;
-die;
+        // $t = $this->get('translator')->trans('hoge');
+        // echo $t;
+        // die;
 
         $entities = $em->getRepository('ValBundle:Register')->findAll();
 

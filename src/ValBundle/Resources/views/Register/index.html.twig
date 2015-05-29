@@ -1,35 +1,22 @@
 {% extends 'ValBundle::layout.html.twig' %}
 
-{% block title %}Register list{% endblock %}
+{% block title %}{{ 'register.index.title'|trans }}{% endblock %}
 
-{% block body -%}
-{% trans %}hoge{% endtrans %}
-
-{% trans %}message.piyo{% endtrans %}
-
-{{ 'message.huga'|trans }}
-
-    <h1>Register list</h1>
-
-    <table class="records_list">
+{% block content_body %}
+<div class="container">
+    <table class="table table-bordered table-striped table-hover">
         <thead>
-            <tr>
+            <tr class="text-center">
                 <th>Id</th>
-                <th>Name</th>
-                <th>Nickname</th>
-                <th>Siteurl</th>
-                <th>Twitter</th>
-                <th>Facebook</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                <th>Remarks</th>
-                <th>Createdby</th>
-                <th>Updatedby</th>
-                <th>Createdat</th>
-                <th>Updatedat</th>
-                <th>Deletedat</th>
-                <th>Actions</th>
+                <th>{{ 'register.name'|trans }}</th>
+                <th>{{ 'register.nickname'|trans }}</th>
+                <th>{{ 'register.remarks'|trans }}</th>
+                <th>{{ 'col_com.createdBy'|trans }}</th>
+                <th>{{ 'col_com.updatedBy'|trans }}</th>
+                <th>{{ 'col_com.createdAt'|trans }}</th>
+                <th>{{ 'col_com.updatedAt'|trans }}</th>
+                <th>{{ 'col_com.deletedAt'|trans }}</th>
+                <th>{{ 'col_com.actions'|trans }}</th>
             </tr>
         </thead>
         <tbody>
@@ -38,12 +25,6 @@
                 <td><a href="{{ path('register_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.name }}</td>
                 <td>{{ entity.nickname }}</td>
-                <td>{{ entity.siteUrl }}</td>
-                <td>{{ entity.twitter }}</td>
-                <td>{{ entity.facebook }}</td>
-                <td>{{ entity.firstName }}</td>
-                <td>{{ entity.lastName }}</td>
-                <td>{{ entity.email }}</td>
                 <td>{{ entity.remarks }}</td>
                 <td>{{ entity.createdBy }}</td>
                 <td>{{ entity.updatedBy }}</td>
@@ -51,25 +32,15 @@
                 <td>{% if entity.updatedAt %}{{ entity.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.deletedAt %}{{ entity.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('register_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('register_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
+                    <a href="{{ path('register_show', { 'id': entity.id }) }}" class="btn btn-default">{{ 'btn_com.show'|trans }}</a>
+                    <a href="{{ path('register_edit', { 'id': entity.id }) }}" class="btn btn-default">{{ 'btn_com.edit'|trans }}</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('register_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+</div>
+<div class="container">
+    <a href="{{ path('register_new') }}" class="btn btn-default">新規登録</a>
+</div>
+{% endblock %}

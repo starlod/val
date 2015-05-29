@@ -1,5 +1,62 @@
-hoge: ほげ
+register:
+    index:
+        title: 登録者一覧
+    new:
+        title: 新規登録者
+    edit:
+        title: 登録者情報更新
+    show:
+        title: 登録者情報詳細
+    name: 名前
+    firstName: 名
+    lastName: 姓
+    firstNameKana: メイ
+    lastNameKana: セイ
+    firstNameEn: firstName
+    lastNameEn: lastName
+    nickname: ニックネーム
+    siteUrl: URL
+    feedUrl: Feed
+    twitter: Twitter
+    ameba: アメーバ
+    facebook: Facebook
+    email: Email
+    remarks: 備考
 
-message:
-    piyo: ぴよ
-    huga: ふが
+# カラム(共通)の定義
+col_com:
+    createdBy: 登録者
+    updatedBy: 更新者
+    createdAt: 登録日
+    updatedAt: 更新日
+    deletedAt: 削除日
+    actions: アクション
+
+# ボタン(共通)の定義
+btn_com:
+    index: 一覧
+    show: 詳細
+    new: 登録
+    edit: 編集
+    update: 更新
+    delete: 削除
+
+# メッセージ(共通)の定義
+msg_com:
+    success:
+        create: 登録しました。
+        update: 更新しました。
+        delete: 削除しました。
+    info:
+        new_conf: 確認後に登録します。
+        edit_conf: 確認後に更新します。
+        delete_conf: 確認後に削除します。
+        search_nothing: 指定条件でデータが見つかりませんでした。
+    error:
+        create: 登録に失敗しました。
+        update: 更新に失敗しました。
+        delete: 削除に失敗しました。
+        downloaded: ダウンロードに失敗しました。
+    warning:
+        duplicate: 既に登録されています。
+        duplicate_username: 既に登録されているユーザネームです。

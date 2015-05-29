@@ -18,6 +18,7 @@
 {% block body %}
     <header>
     {% block header %}
+
     {% endblock %}
     </header>
 
@@ -42,7 +43,7 @@
     <div id="contents">
         {% block flash_message %}
             {# フラッシュメッセージを表示する(別テンプレートからインクルード) #}
-            {% include "AppDefaultBundle::_message.html.twig" %}
+            {% include "ValBundle::_message.html.twig" %}
         {% endblock %}
 
         <section>
@@ -60,6 +61,7 @@
             {% block widget_02 %}{% endblock %}
             {% block widget_03 %}{% endblock %}
         </div>
+    {% endblock %}
     </article>
 
     <footer>
